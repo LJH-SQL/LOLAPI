@@ -1,6 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
+<script type="text/javascript">
+	function name_check(){
+		if (searchF.Search_id.value==""){
+			alert("아이디를 입력해주세요")
+			return false
+		}
+		return true
+	}
+</script>
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -41,15 +50,17 @@
                 <!-- Masthead Avatar Image-->
                 <img class="masthead-avatar mb-5" src="resources/assets/img/avataaars.svg" alt="..." />
                 <!-- Masthead Heading-->
-                <div class="input-group" >
-	                <input type="text" name="Search_id" placeholder="사용자 이름" style=width:40%;margin-left:350px;></input>
-	                <span class="input-group-btn">
-	                    <button class="btn btn-secondary" type="submit" style=margin-left:3px;>검색</button>
-	                </span>
-                </div>
+               	<form name= "searchF" method="post" action="#" onsubmit="name_check()">
+               		
+	                <div>
+	                	<input type="text" id="form-control" name="Search_id" placeholder="사용자 이름" style=width:40%;></input>
+		                <span class="input-group-btn">
+		                    <button class="btn btn-secondary" type="submit" style=margin-left:10px;>검색</button>
+		                </span>
+	                </div>
+                </form>
                 <h1 class="masthead-heading text-uppercase mb-0">Start Bootstrap</h1>
                 <div>
-                	<input type="text">
                 </div>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
