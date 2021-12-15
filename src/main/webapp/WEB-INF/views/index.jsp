@@ -50,10 +50,10 @@
                 <!-- Masthead Avatar Image-->
                 <img class="masthead-avatar mb-5" src="resources/assets/img/avataaars.svg" alt="..." />
                 <!-- Masthead Heading-->
-               	<form name= "searchF" method="post" action="#" onsubmit="name_check()">
+               	<form name= "searchF" method="post" action="LOLAPI.search" onsubmit="name_check()">
                		
 	                <div>
-	                	<input type="text" id="form-control" name="Search_id" placeholder="사용자 이름" style=width:40%;></input>
+	                	<input type="text" id="form-control" name="name" placeholder="사용자 이름" style=width:40%;></input>
 		                <span class="input-group-btn">
 		                    <button class="btn btn-secondary" type="submit" style=margin-left:10px;>검색</button>
 		                </span>
