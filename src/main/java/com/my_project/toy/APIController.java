@@ -35,7 +35,6 @@ public class APIController {
 		header.add("Accept-Charset","application/x-www-form-urlencoded; charset=UTF-8");
 		header.add("Origin","https://developer.riotgames.com");
 		HttpEntity<MultiValueMap<String,String>> he = new HttpEntity(header);
-		System.out.print("여기까지");
 		ResponseEntity<String> response = rt.exchange(
 				requestURL,
 				HttpMethod.GET,
@@ -53,12 +52,7 @@ public class APIController {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		long level = dto.getSummonerLevel();
-		System.out.print("여기까지");
-		System.out.print(level);
 		mav.addObject("response",response);
-		
-		
 		return mav;
 	}
 }
