@@ -27,7 +27,7 @@ public class APIController {
 		APIDTO dto = new APIDTO();
 		RestTemplate rt = new RestTemplate(); 
 		String summonerName = name.replace(" ","%20"); // 공백처리 (lolAPI에선 공백을 %20으로 변환)
-		String APIKey = "RGAPI-f370b62c-c595-4540-adde-b230cb6a4b1f";
+		String APIKey = "RGAPI-57607927-c8bc-4cc0-9eb8-57f62172d1d1";
 		String requestURL = "https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/"+summonerName+"?api_key="+APIKey;
 		HttpHeaders header = new HttpHeaders();
 		header.add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36");
@@ -41,7 +41,6 @@ public class APIController {
 				he,
 				String.class
 		);
-		
 		ObjectMapper objectMapper = new ObjectMapper();
 		try {
 			dto = objectMapper.readValue(response.getBody(), APIDTO.class);
