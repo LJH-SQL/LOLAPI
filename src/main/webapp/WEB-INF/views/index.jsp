@@ -1,59 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
-<script type="text/javascript">
-	function name_check(){
-		if (searchF.Search_id.value==""){
-			alert("아이디를 입력해주세요")
-			return false
-		}
-		return true
-	}
-</script>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>롤체크</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="resources/assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="resources/css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand" href="#page-top">MY TOY-PROJECT</a>
-                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#TEST1">Portfolio</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+<jsp:include page="header.jsp"/>
         <!-- Masthead-->
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
                 <img class="masthead-avatar mb-5" src="resources/assets/img/avataaars.svg" alt="..." />
                 <!-- Masthead Heading-->
-               	<form name= "searchF" method="post" action="#" onsubmit="name_check()">
+               	<form name= "searchF" method="post" action="LOLAPI.search" onsubmit="name_check()">
                		
 	                <div>
-	                	<input type="text" id="form-control" name="Search_id" placeholder="사용자 이름" style=width:40%;></input>
+	                	<input type="text" id="form-control" name="name" placeholder="사용자 이름" style=width:40%;></input>
 		                <span class="input-group-btn">
 		                    <button class="btn btn-secondary" type="submit" style=margin-left:10px;>검색</button>
 		                </span>
