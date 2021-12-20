@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -18,9 +19,13 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.my_project.model.APIDTO;
+import com.my_project.service.APIMapper;
 
 @Controller
 public class APIController {
+	@Autowired
+	APIMapper apiMapper;
+	
 	@RequestMapping(value = "LOLAPI.search" )
 	public ModelAndView LOLAPI(String name, HttpServletRequest req) {	//객체 가져오기
 		ModelAndView mav = new ModelAndView("info");
