@@ -39,7 +39,12 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
-				
+		<!-- Lombok -->
+		<dependency> 
+			<groupId>org.projectlombok</groupId> 
+			<artifactId>lombok</artifactId> 
+			<version>1.16.16</version> 
+		</dependency>
 		<!-- AspectJ -->
 		<dependency>
 			<groupId>org.aspectj</groupId>
